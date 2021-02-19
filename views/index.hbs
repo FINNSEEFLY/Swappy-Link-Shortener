@@ -1,0 +1,38 @@
+<article class="content">
+    <section id="CutItSwappyMessage" class="largeBanner">
+        <div class="largeBannerContainer">
+            <h1 id="bannerMainMessage" class="bannerMessage">
+                Режь ссылки с <span class="bolder">Swappy</span>!
+            </h1>
+            <h2 id="bannerOtherMessage" class="bannerMessage">
+                Получи все приемущества от сокращенных ссылок! Просто попробуй в форме снизу!
+            </h2>
+        </div>
+    </section>
+    <section id="linkCutterBox" class="linkCutter">
+        <h2 id="headerPromptUrl" class="bannerMessage">Вставь большую ссылку и получи поменьше =D</h2>
+        <form action="/makeRandomShortLink" method="post" class="inputForm" id="randomShortLinkForm" name="urlForm">
+            <div class="flexRowContainer">
+                <label for="inputUrl" class="labelBeforeInputUrl">Длинный URL</label>
+                <input type="url" id="inputUrl" name="urlForCut" class="inputForUrl" placeholder="https://some.long.link.com/Some/Kind/Of/Long/Long/Url"/>
+                <button type="button" id="getShortUrl" class="buttonForm">Укоротить</button>
+            </div>
+            <div class="flexRowContainer">
+                <label for="outputUrl" class="labelBeforeInputUrl">Короткий URL</label>
+                <input type="url" id="outputUrl" name="shortUrl" class="inputForUrl" readonly placeholder="https://swappy.site/qwerty1337">
+                <button type="button" id="copyButton" class="buttonForm">Копировать</button>
+            </div>
+        </form>
+    </section>
+    <section id="wannaMore" class="largeBanner">
+        <div class="largeBannerContainer">
+            <h2 id="wannaMoreFirst" class="bannerMessage">Хочешь большего?</h2>
+            <h3 id="wannaMoreSecond" class="bannerMessage">Зарегистрируйся или авторизуйся и получи полный
+                контроль над созданными ссылками!</h3>
+            <div class="flexRowContainer">
+                <a id="registerButton" class="buttonNav" href="/register">Зарегистрироваться</a>
+                <a id="authButton" class="buttonNav" href="/auth">Авторизоваться</a>
+            </div>
+        </div>
+    </section>
+</article>
