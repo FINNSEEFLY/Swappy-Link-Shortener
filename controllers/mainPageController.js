@@ -1,4 +1,4 @@
 const {getMainPage} = require("../models/mainPageModel");
-module.exports.mainPageController = function (request, response) {
+module.exports.mainPageController = (request, response) => {
     response.render(...getMainPage());
 }

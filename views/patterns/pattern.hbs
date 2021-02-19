@@ -7,5 +7,10 @@
     {{{body}}}
     {{>footer}}
 </div>
+{{#if scriptsAfter}}
+    {{#each scriptsAfter}}
+        <script src={{{this}}}> </script>
+    {{/each}}
+{{/if}}
 </body>
 </html>

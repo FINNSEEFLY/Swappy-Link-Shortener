@@ -11,10 +11,10 @@
     </section>
     <section id="linkCutterBox" class="linkCutter">
         <h2 id="headerPromptUrl" class="bannerMessage">Вставь большую ссылку и получи поменьше =D</h2>
-        <form action="/makeRandomShortLink" method="post" class="inputForm" id="randomShortLinkForm" name="urlForm">
+        <form action="/randomShortLinkModel" method="post" class="inputForm" id="randomShortLinkForm" name="urlForm">
             <div class="flexRowContainer">
                 <label for="inputUrl" class="labelBeforeInputUrl">Длинный URL</label>
-                <input type="url" id="inputUrl" name="urlForCut" class="inputForUrl" placeholder="https://some.long.link.com/Some/Kind/Of/Long/Long/Url"/>
+                <input type="url" id="inputUrl" name="urlForCut" class="inputForUrl" required placeholder="https://some.long.link.com/Some/Kind/Of/Long/Long/Url"/>
                 <button type="button" id="getShortUrl" class="buttonForm">Укоротить</button>
             </div>
             <div class="flexRowContainer">
