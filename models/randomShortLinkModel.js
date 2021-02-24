@@ -1,13 +1,11 @@
+const {getShortLinkId} = require("../dao/mySqlGetShortLinkId");
 const {insertRandomLink} = require("../dao/mysqlInsertRandomLink");
 const {getRandomString} = require("../utils/stringMaker");
-const {isShortLinkAvailable} = require("../dao/mySqlCheckShortLink")
 module.exports.getRandomShortLink = async (longUrl) => {
     let randomLink;
-    let status = false;
     do {
         randomLink = getRandomString(8);
-        status = await isShortLinkAvailable(randomLink);
-    } while (!status)
+    } while (await getShortLinkId(randomLink).length>0)
     insertRandomLink(randomLink, longUrl)
     return randomLink;
 }

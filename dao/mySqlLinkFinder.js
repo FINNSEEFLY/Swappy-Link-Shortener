@@ -1,5 +1,5 @@
 const {mysql} = require("./mysqlPull");
-module.exports.getLongLink = (shortLink) => {
+module.exports.getLongLinkByShortLink = (shortLink) => {
     const request = `SELECT ll_long_url
                      FROM swappydb.long_link
                      WHERE ll_id IN (SELECT ro_long_url_id

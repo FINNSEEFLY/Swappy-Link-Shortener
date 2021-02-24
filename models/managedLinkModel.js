@@ -1,9 +1,9 @@
 const {Rule} = require("../beans/Rule");
 const {FullLinkInfo} = require("../beans/FullLinkInfo");
 const {getRulesForShortLink} = require("../dao/mySqlGetRules");
-const {getLongLink} = require("../dao/mySqlLinkFinder");
+const {getLongLinkByShortLink} = require("../dao/mySqlLinkFinder");
 module.exports.managedLinkModel = (link) => {
-    return getLongLink(link).then(result => {
+    return getLongLinkByShortLink(link).then(result => {
         let resObj = new FullLinkInfo();
         if (result.length === 0) {
             resObj.links.push('/');

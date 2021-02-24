@@ -1,5 +1,5 @@
 const {mysql} = require("./mysqlPull");
-module.exports.isRouteExist = (shortLinkId, longLinkId) => {
+module.exports.getRoutIdByShortLinkAndLongLink = (shortLinkId, longLinkId) => {
     const request = `SELECT ro_id
                      FROM swappydb.route
                      WHERE ro_short_url_id = ?

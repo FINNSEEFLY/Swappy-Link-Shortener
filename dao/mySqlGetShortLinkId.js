@@ -1,5 +1,5 @@
 const {mysql} = require("./mysqlPull");
-module.exports.isShortLinkExist = (shortLink) => {
+module.exports.getShortLinkId = (shortLink) => {
     const request = `SELECT sl_id
                      FROM swappydb.short_link
                      WHERE sl_short_url = ?`
