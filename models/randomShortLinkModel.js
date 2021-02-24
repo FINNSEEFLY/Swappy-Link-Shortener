@@ -1,6 +1,6 @@
 const {getShortLinkId} = require("../dao/mySqlGetShortLinkId");
 const {insertRandomLink} = require("../dao/mysqlInsertRandomLink");
-const {getRandomString} = require("../utils/stringMaker");
+const {getRandomString} = require("../utils/randomStringMaker");
 module.exports.getRandomShortLink = async (longUrl) => {
     let randomLink;
     do {

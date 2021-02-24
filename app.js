@@ -1,6 +1,7 @@
 const express = require("express");
 const hbs = require("hbs");
 const expressHbs = require("express-handlebars");
+const expressSession = require("express-session")
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const {receiveStatistics} = require("./controllers/receiveStatisticsController");

@@ -1,9 +1,6 @@
 class ClickStatistics {
     shortLink;
     shortLinkId;
-    longLink;
-    longLinkId;
-    routeId;
     dateTime;
     referer;
     platform;
@@ -11,9 +8,8 @@ class ClickStatistics {
     height;
     ip;
 
-    constructor(shortUrl, longUrl, dateTime, referer, platform, width, height, ip) {
+    constructor(shortUrl, dateTime, referer, platform, width, height, ip) {
         this.shortLink = shortUrl;
-        this.longLink = longUrl;
         this.dateTime = dateTime;
         this.referer = referer;
         this.platform = platform;
