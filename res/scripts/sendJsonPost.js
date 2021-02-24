@@ -1,4 +1,4 @@
-function post(url, requestBody) {
+function sendJsonPost(url, requestBody) {
     return new Promise(function (resolve, reject) {
         let request = new XMLHttpRequest();
         request.open("POST", url, true);
@@ -12,21 +12,6 @@ function post(url, requestBody) {
         request.addEventListener("error", function () {
             reject(new Error("Network error"));
         });
-        request.send(JSON.stringify({link: requestBody}));
+        request.send(JSON.stringify(requestBody));
     });
-}
-
-let form = document.getElementById("randomShortLinkForm");
-let inputForm = form.urlForCut;
-let resultInput = form.shortUrl;
-document.getElementById("getShortUrl").addEventListener("click", getShortLink)
-
-function getShortLink() {
-    if (inputForm.value) {
-        post("/randomShortLinkModel", inputForm.value).then(result => {
-            resultInput.value = result;
-        }, error => {
-            console.log(error);
-        });
-    }
 }

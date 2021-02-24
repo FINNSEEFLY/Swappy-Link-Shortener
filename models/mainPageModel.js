@@ -1,6 +1,7 @@
 module.exports.getMainPage = function () {
     return ["index", {
         title: "Сокращатель Swappy",
-        scriptsAfter: ["scripts/getShortLink.js", "scripts/copyToClipboard.js"]
+        scripts: ["system/scripts/sendJsonPost.js"],
+        scriptsAfter: ["system/scripts/getShortLink.js", "system/scripts/copyToClipboard.js"],
     }];
 }

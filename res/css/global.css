@@ -22,14 +22,20 @@ nav {
     background: #2b8dff;
 }
 
+.linkWrapper {
+    display: table;
+    padding: 0.5rem;
+    margin: 1.2rem 2rem;
+}
+
 .buttonNav {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     font-size: 1.1rem;
     padding: 0.5rem;
-    border-radius: 1.2rem;
     margin: 1.2rem 2rem;
+    border-radius: 1.2rem;
     font-weight: bold;
 }
 
@@ -42,21 +48,21 @@ nav {
     transition-timing-function: ease;
 }
 
-#exitButton, #authButton {
+.redButton {
     border: 0.4rem solid #fa6565;
     background: #fa6565;
     color: white;
     transition: border-color 0.3s ease;
 }
 
-#myCabButton, #registerButton {
+.greenButton {
     border: 0.4rem solid #1ec770;
     background: #1ec770;
     color: white;
     transition: border-color 0.3s ease;
 }
 
-#exitButton:hover, #authButton:hover, #myCabButton:hover, #registerButton:hover {
+.greenButton:hover, .redButton:hover {
     border-color: white;
 }
 
@@ -141,6 +147,10 @@ nav {
     justify-content: center;
 }
 
+.flexRowDownSideIndex {
+    flex-shrink: 1;
+}
+
 footer {
     display: block;
     width: 100%;
@@ -153,6 +163,7 @@ footer {
     text-shadow: #b5b5b5 1px 1px 1px;
     color: #3C3C3C;
     padding: 0.5em 0;
+    min-height: calc(3vh);
 }
 
 .linkCutter {
@@ -188,6 +199,7 @@ footer {
     font-size: 1.5rem;
     margin: 1rem 0.5rem;
     width: 70%;
+    padding: 0.2rem;
 }
 
 .buttonForm {

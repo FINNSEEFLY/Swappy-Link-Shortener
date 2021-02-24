@@ -11,15 +11,18 @@
     </section>
     <section id="linkCutterBox" class="linkCutter">
         <h2 id="headerPromptUrl" class="bannerMessage">Вставь большую ссылку и получи поменьше =D</h2>
-        <form action="/randomShortLinkModel" method="post" class="inputForm" id="randomShortLinkForm" name="urlForm">
+        <form action="/system/randomShortLinkModel" method="post" class="inputForm" id="randomShortLinkForm"
+              name="urlForm">
             <div class="flexRowContainer">
                 <label for="inputUrl" class="labelBeforeInputUrl">Длинный URL</label>
-                <input type="url" id="inputUrl" name="urlForCut" class="inputForUrl" required placeholder="https://some.long.link.com/Some/Kind/Of/Long/Long/Url"/>
+                <input type="url" id="inputUrl" name="urlForCut" class="inputForUrl" required
+                       placeholder="https://some.long.link.com/Some/Kind/Of/Long/Long/Url"/>
                 <button type="button" id="getShortUrl" class="buttonForm">Укоротить</button>
             </div>
             <div class="flexRowContainer">
                 <label for="outputUrl" class="labelBeforeInputUrl">Короткий URL</label>
-                <input type="url" id="outputUrl" name="shortUrl" class="inputForUrl" readonly placeholder="https://swappy.site/qwerty1337">
+                <input type="url" id="outputUrl" name="shortUrl" class="inputForUrl" readonly
+                       placeholder="https://swappy.site/qwerty1337">
                 <button type="button" id="copyButton" class="buttonForm">Копировать</button>
             </div>
         </form>
@@ -30,8 +33,8 @@
             <h3 id="wannaMoreSecond" class="bannerMessage">Зарегистрируйся или авторизуйся и получи полный
                 контроль над созданными ссылками!</h3>
             <div class="flexRowContainer">
-                <a id="registerButton" class="buttonNav" href="/register">Зарегистрироваться</a>
-                <a id="authButton" class="buttonNav" href="/auth">Авторизоваться</a>
+                <a id="registerButtonDown" class="buttonNav greenButton flexRowDownSideIndex" href="/register">Зарегистрироваться</a>
+                <a id="authButtonDown" class="buttonNav redButton flexRowDownSideIndex" href="/auth">Авторизоваться</a>
             </div>
         </div>
     </section>

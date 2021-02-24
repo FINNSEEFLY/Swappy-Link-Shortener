@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>defaulthead}}
+<script>
+    analyticsInfo.url_to = `{{{next_link}}}`;
+    sendJsonPost(`/system/sendStatsInfo`,analyticsInfo);
+    document.location.href = `{{{next_link}}}`;
+</script>
+<body>
+</body>
+</html>

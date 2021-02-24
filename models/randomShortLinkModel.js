@@ -8,6 +8,6 @@ module.exports.getRandomShortLink = async (longUrl) => {
         randomLink = getRandomString(8);
         status = await isShortLinkAvailable(randomLink);
     } while (!status)
-    insertRandomLink(randomLink, longUrl);
+    insertRandomLink(randomLink, longUrl)
     return randomLink;
 }

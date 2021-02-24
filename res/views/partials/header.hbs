@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <img class="logo" src="/system/img/Swappybw.svg" alt="Logo">
+        <div class="linkWrapper"><a id="mainPageButton" class="buttonNav" href="/">Главная страница</a></div>
+        {{#if isAuth}}
+            <div class="linkWrapper"><a id="myCabButton" class="buttonNav greenButton" href="/myCabinet">Личный кабинет</a></div>
+            <div class="linkWrapper"><a id="exitButton" class="buttonNav redButton" href="/exit">Выход</a></div>
+        {{else}}
+            <div class="linkWrapper"><a id="registerButton" class="buttonNav greenButton" href="/register">Зарегистрироваться</a>
+            </div>
+            <div class="linkWrapper"><a id="authButton" class="buttonNav redButton" href="/auth">Авторизоваться</a></div>
+        {{/if}}
+    </nav>
+</header>
